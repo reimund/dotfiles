@@ -13,10 +13,13 @@ autoload zmv
 setopt autopushd
 
 # Set environment variables.
-export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/apache2/bin:~/bin/:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/apache2/bin:~/bin/:/opt/local/lib/postgresql92/bin:$PATH
+export PYTHONPATH=/Library/Python/2.7/site-packages/django/bin:PYTHONPATH
 export ZDOTDIR=~
 #export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export FONTCONFIG_PATH=/opt/local/etc/fonts/
+export DJANGO_ENV=hackmon
 
 
 # Source host specific file.

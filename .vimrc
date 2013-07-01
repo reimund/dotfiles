@@ -34,6 +34,8 @@ if has('mac')
 	set lines=120 columns=240
 endif
 
+" Alias ConnorKrammer's vim-bufferclose.
+:command D Kwbd
 
 " Add CSS syntax highlighting to files with the .less extension.
 au BufRead,BufNewFile *.less setfiletype css
@@ -51,34 +53,36 @@ filetype plugin on  " Enable filetype-specific plugins (Used by Align.vba).
 
 " Buftabs settings
 " ----------------
-set laststatus=2
-let g:buftabs_only_basename=1
-let g:buftabs_in_statusline=1
-let g:buftabs_active_highlight_group="Visual"
+"set laststatus=2
+"let g:buftabs_only_basename=1
+"let g:buftabs_in_statusline=1
+"let g:buftabs_active_highlight_group="Visual"
 noremap <C-h> :bprev<CR> 
 noremap <C-l> :bnext<CR> 
 
 
 " Behind the scenes stuff
 " -----------------------
-set backup              " Put backup files (~[filename]) in C:\Temp rather
-set backupdir=/tmp      "   than in the local directory
-set directory=/tmp      "   and swap files as well.
-set history=50          " Keep 50 lines of command line history.
-set showcmd             " Display incomplete commands.
-set incsearch           " Do incremental searching.
-set clipboard=unnamed   " Make yanks put stuff on the OS clipboard.
-set ignorecase          " Annoying when searching,
-set smartcase           "   enable smart case instead.
+set backup                    " Put backup files (~[filename]) in C:\Temp rather
+set backupdir=/tmp            "   than in the local directory
+set directory=/tmp            "   and swap files as well.
+set history=50                " Keep 50 lines of command line history.
+set showcmd                   " Display incomplete commands.
+set incsearch                 " Do incremental searching.
+set clipboard=unnamed         " Make yanks put stuff on the OS clipboard.
+set ignorecase                " Annoying when searching,
+set smartcase                 "   enable smart case instead.
 
 set fileformat=unix           " Get pretty line endings.
 set fileformats=unix,dos,mac  " Detect fileformat.
 
-language C              " Use default language (english...).
-
+language C                     " Use default language (english...).
 
 " Key mappings
 " ------------
+
+" Fly.
+map <M-Space> :ls<CR>:b<space>
 
 map <S-RIGHT> :bn<CR>
 map <S-LEFT> :bp<CR>
