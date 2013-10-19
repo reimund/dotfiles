@@ -40,6 +40,9 @@ endif
 " Add CSS syntax highlighting to files with the .less extension.
 au BufRead,BufNewFile *.less setfiletype css
 
+" Add xml syntax highlighting to files with the .mxi extension.
+au BufRead,BufNewFile *.mxi setfiletype xml
+
 
 " Indentation settings
 " --------------------
@@ -51,9 +54,12 @@ set shiftwidth=4    " Let (auto)indent use 4 spaces.
 filetype plugin on  " Enable filetype-specific plugins (Used by Align.vba).
 
 
+" Show filename in status line.
+set laststatus=2
+
+
 " Buftabs settings
 " ----------------
-"set laststatus=2
 "let g:buftabs_only_basename=1
 "let g:buftabs_in_statusline=1
 "let g:buftabs_active_highlight_group="Visual"
