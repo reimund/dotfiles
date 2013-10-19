@@ -1,0 +1,18 @@
+[user]
+	name = Reimund Trost
+	email = reimund@code7.se
+
+[core]
+	editor=vim
+
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	log = auto
+	shortlog = auto
+
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
