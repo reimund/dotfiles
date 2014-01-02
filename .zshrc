@@ -30,6 +30,7 @@ export DJANGO_ENV=hackmon
 
 alias ss='source ~/.zshrc'
 alias zshrc='mvim ~/.zshrc'
+alias crontab='VIM_CRONTAB=true crontab'
 
 alias rm='rm -i'
 alias df='df -h'
@@ -308,3 +309,8 @@ setopt extended_history     # Save timestamps with command.
 
 # vim: ft=zsh foldmethod=marker :
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

@@ -17,7 +17,7 @@ set nocompatible
 " Misc appearance settings
 " ------------------------
 syntax on           " Enable syntax highlighting.
-color paintbox      " Set color scheme.
+color hybrid        " Set color scheme.
 set enc=utf-8       " Encode files in UTF-8.
 set cursorline      " Show the line cursor.
 set number          " Show line numbers.
@@ -146,6 +146,13 @@ nmap <F6> :Rand <CR>
 nmap <F7> :Rand 100<CR>
 nmap <F8> :Rand 100000<CR>
 
+" Fix crontab thingie.
+:if $VIM_CRONTAB == "true"
+:set nobackup
+:set nowritebackup
+:endif
+:set backup
+:set writebackup
 
 " }}} End My Stuff
 " ================
