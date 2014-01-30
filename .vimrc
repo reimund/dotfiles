@@ -13,6 +13,11 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" Enable pathogen.vim.
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
 
 " Misc appearance settings
 " ------------------------
