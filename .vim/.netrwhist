@@ -1,0 +1,4 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/Volumes/System2/Users/reimund/Projects/lumens/website/lumens/less/lumens'
+let g:netrw_dirhist_2='/Volumes/System2/Users/reimund/Projects/lumens/website/lumens/less/client'
