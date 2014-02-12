@@ -1,6 +1,2 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =1
 let g:netrw_dirhist_1='/Volumes/System2/Users/reimund/Projects/lumens/website/lumens/less/lumens'
-let g:netrw_dirhist_2='/Volumes/System2/Users/reimund/Projects/lumens/website/lumens/less/client'
-let g:netrw_dirhist_3='C:\Windows'
-let g:netrw_dirhist_4='C:'

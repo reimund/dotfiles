@@ -18,6 +18,9 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" Automatically open NERDTree when vim starts if no files are specified.
+autocmd vimenter * if !argc() | NERDTree | endif
+
 
 " Misc appearance settings
 " ------------------------
