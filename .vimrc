@@ -32,12 +32,16 @@ set guioptions+=b   " Shoset lines=40 columns=100w the horizontal scrollbar.
 set nowrap          " Disable text wrap.
 set ruler           " Show the cursor position all the time.
 set hlsearch        " Highlight all search results.
-"set guifont=Envy\ Code\ R:h14
-set guifont=Menlo:h12
 
 if has('mac')
+	set guifont=Menlo:h12
 	set lines=120 columns=240
 endif
+
+if has('win32')
+	set guifont=Envy\ Code\ R:h10
+endif
+" }}}
 
 " Alias ConnorKrammer's vim-bufferclose.
 :command D Kwbd
