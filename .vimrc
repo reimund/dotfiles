@@ -18,9 +18,6 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-" Automatically open NERDTree when vim starts if no files are specified.
-autocmd vimenter * if !argc() | NERDTree | endif
-
 
 " Misc appearance settings
 " ------------------------
@@ -35,6 +32,10 @@ set guioptions+=b   " Shoset lines=40 columns=100w the horizontal scrollbar.
 set nowrap          " Disable text wrap.
 set ruler           " Show the cursor position all the time.
 set hlsearch        " Highlight all search results.
+set lines=65 columns=120
+set synmaxcol=500	 " Avoid slow syntax highlighting on very long lines.
+set fdm=marker       " Use fold method = marker.
+set list lcs=tab:\|\ " Show tab characters as |.
 
 if has('mac')
 	set guifont=Menlo:h12
@@ -52,8 +53,15 @@ endif
 " Add CSS syntax highlighting to files with the .less extension.
 au BufRead,BufNewFile *.less setfiletype css
 
+" Add less syntax highlighting to files with the .less extension.
+au BufNewFile,BufRead *.less set filetype=less
+
 " Add xml syntax highlighting to files with the .mxi extension.
 au BufRead,BufNewFile *.mxi setfiletype xml
+
+au BufRead,BufNewFile *.paf setfiletype yaml
+au BufRead,BufNewFile *.v3s setfiletype php
+au BufRead,BufNewFile *.hook setfiletype php
 
 
 " Indentation settings
@@ -81,9 +89,6 @@ noremap <C-l> :bnext<CR>
 
 " Behind the scenes stuff
 " -----------------------
-set backup                    " Put backup files (~[filename]) in C:\Temp rather
-set backupdir=/tmp            "   than in the local directory
-set directory=/tmp            "   and swap files as well.
 set history=50                " Keep 50 lines of command line history.
 set showcmd                   " Display incomplete commands.
 set incsearch                 " Do incremental searching.
@@ -95,6 +100,21 @@ set fileformat=unix           " Get pretty line endings.
 set fileformats=unix,dos,mac  " Detect fileformat.
 
 language C                     " Use default language (english...).
+
+if has('win32')
+	set guifont=Envy\ Code\ R:h10
+	set backup                    " Put backup files (~[filename]) in C:\Temp rather
+	set backupdir=C:\Windows\temp "   than in the local directory
+	set directory=C:\Windows\temp "   and swap files as well.
+
+	set backspace=indent,eol,start " Fix broken backspace (need this on my windows
+								   "machine, not sure why).
+
+else
+	set backup                    " Put backup files (~[filename]) in C:\Temp rather
+	set backupdir=/tmp            "   than in the local directory
+	set directory=/tmp            "   and swap files as well.
+endif
 
 " Key mappings
 " ------------
