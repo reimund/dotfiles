@@ -69,6 +69,9 @@ alias gitk='gitk &'
 alias gsu='git stash && git remote update && git rebase origin master && git stash pop'
 
 alias lum='cd ~/Projects/lumens/website/lumens/'
+alias kel='cd ~/Projects/lumens/website/kelvin/'
+alias tools='cd ~/Projects/lumens/website/tools/'
+alias bit='cd ~/Projects/bitsek.se/2.0/'
 alias fa='cd ~/Projects/fashionaffiliate'
 
 alias show_hidden='defaults write com.apple.Finder AppleShowAllFiles YES'
