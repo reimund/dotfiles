@@ -180,11 +180,9 @@ nmap <F8> :Rand 100000<CR>
 
 " Fix crontab thingie.
 :if $VIM_CRONTAB == "true"
-:set nobackup
-:set nowritebackup
+	set backupskip=/tmp/*,/private/tmp/*" 
 :endif
-:set backup
-:set writebackup
+
 
 " }}} End My Stuff
 " ================
