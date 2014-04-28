@@ -99,7 +99,7 @@ set smartcase                 "   enable smart case instead.
 set fileformat=unix           " Get pretty line endings.
 set fileformats=unix,dos,mac  " Detect fileformat.
 
-language C                     " Use default language (english...).
+language C                    " Use default language (english...).
 
 if has('win32')
 	set guifont=Envy\ Code\ R:h10
