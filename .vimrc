@@ -39,7 +39,7 @@ set list lcs=tab:\|\ " Show tab characters as |.
 
 if has('mac')
 	set guifont=Menlo:h12
-	set lines=120 columns=240
+	set lines=120 columns=160
 endif
 
 if has('win32')
@@ -183,6 +183,30 @@ nmap <F8> :Rand 100000<CR>
 	set backupskip=/tmp/*,/private/tmp/*" 
 :endif
 
+" Smart tab completion function from
+" http://vim.wikia.com/wiki/Smart_mapping_for_tab_completion
+function! Smart_TabComplete()
+  let line = getline('.')                         " current line
+
+  let substr = strpart(line, -1, col('.')+1)      " from the start of the current
+                                                  " line to one character right
+                                                  " of the cursor
+  let substr = matchstr(substr, "[^ \t]*$")       " word till cursor
+  if (strlen(substr)==0)                          " nothing to match on empty string
+    return "\<tab>"
+  endif
+  let has_period = match(substr, '\.') != -1      " position of period, if any
+  let has_slash = match(substr, '\/') != -1       " position of slash, if any
+  if (!has_period && !has_slash)
+    return "\<C-X>\<C-P>"                         " existing text matching
+  elseif ( has_slash )
+    return "\<C-X>\<C-F>"                         " file matching
+  else
+    return "\<C-X>\<C-O>"                         " plugin matching
+  endif
+endfunction
+
+inoremap <tab> <c-r>=Smart_TabComplete()<CR>
 
 " }}} End My Stuff
 " ================
