@@ -30,6 +30,7 @@ export DJANGO_ENV=hackmon
 
 alias ss='source ~/.zshrc'
 alias zshrc='mvim ~/.zshrc'
+alias vimrc='mvim ~/.vimrc'
 alias crontab='VIM_CRONTAB=true crontab'
 
 alias rm='rm -i'
