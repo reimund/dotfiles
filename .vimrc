@@ -32,10 +32,14 @@ set guioptions+=b   " Shoset lines=40 columns=100w the horizontal scrollbar.
 set nowrap          " Disable text wrap.
 set ruler           " Show the cursor position all the time.
 set hlsearch        " Highlight all search results.
-set lines=65 columns=120
 set synmaxcol=500	 " Avoid slow syntax highlighting on very long lines.
 set fdm=marker       " Use fold method = marker.
 set list lcs=tab:\|\ " Show tab characters as |.
+
+" This makes things go whack in the terminal for some reason.
+if has("gui")
+	set lines=65 columns=120
+endif
 
 if has('mac')
 	set guifont=Menlo:h12
@@ -185,28 +189,28 @@ nmap <F8> :Rand 100000<CR>
 
 " Smart tab completion function from
 " http://vim.wikia.com/wiki/Smart_mapping_for_tab_completion
-function! Smart_TabComplete()
-  let line = getline('.')                         " current line
+"function! Smart_TabComplete()
+  "let line = getline('.')                         " current line
 
-  let substr = strpart(line, -1, col('.')+1)      " from the start of the current
-                                                  " line to one character right
-                                                  " of the cursor
-  let substr = matchstr(substr, "[^ \t]*$")       " word till cursor
-  if (strlen(substr)==0)                          " nothing to match on empty string
-    return "\<tab>"
-  endif
-  let has_period = match(substr, '\.') != -1      " position of period, if any
-  let has_slash = match(substr, '\/') != -1       " position of slash, if any
-  if (!has_period && !has_slash)
-    return "\<C-X>\<C-P>"                         " existing text matching
-  elseif ( has_slash )
-    return "\<C-X>\<C-F>"                         " file matching
-  else
-    return "\<C-X>\<C-O>"                         " plugin matching
-  endif
-endfunction
+  "let substr = strpart(line, -1, col('.')+1)      " from the start of the current
+                                                  "" line to one character right
+                                                  "" of the cursor
+  "let substr = matchstr(substr, "[^ \t]*$")       " word till cursor
+  "if (strlen(substr)==0)                          " nothing to match on empty string
+    "return "\<tab>"
+  "endif
+  "let has_period = match(substr, '\.') != -1      " position of period, if any
+  "let has_slash = match(substr, '\/') != -1       " position of slash, if any
+  "if (!has_period && !has_slash)
+    "return "\<C-X>\<C-P>"                         " existing text matching
+  "elseif ( has_slash )
+    "return "\<C-X>\<C-F>"                         " file matching
+  "else
+    "return "\<C-X>\<C-O>"                         " plugin matching
+  "endif
+"endfunction
 
-inoremap <tab> <c-r>=Smart_TabComplete()<CR>
+"inoremap <tab> <c-r>=Smart_TabComplete()<CR>
 
 " }}} End My Stuff
 " ================
