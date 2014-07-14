@@ -93,6 +93,8 @@ noremap <C-l> :bnext<CR>
 
 " Behind the scenes stuff
 " -----------------------
+autocmd! GUIEnter * set vb t_vb= " Disable annoying bell sound!
+
 set history=50                " Keep 50 lines of command line history.
 set showcmd                   " Display incomplete commands.
 set incsearch                 " Do incremental searching.
