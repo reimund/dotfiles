@@ -1,0 +1,19 @@
+{
+    "linting.collapsed": true,
+    "themes.theme": "care-bear-stare-dark",
+    "vimderbar.enabled": true,
+    "wordWrap": false,
+    "styleActiveLine": true,
+    "fonts.fontSize": "14px",
+    "useTabChar": true,
+    "tabSize": 4,
+    "jwolfe.file-tree-exclude.list": [
+        "node_modules",
+        ".git",
+        "vendor",
+        "Running Performance (bicimetrics)",
+        "Running Performance (salming)",
+        "Running Performance (khp)"
+    ],
+    "toggleToolbar.hidden": false
+}

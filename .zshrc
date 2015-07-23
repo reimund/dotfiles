@@ -7,6 +7,7 @@
 #    zshrc: interactive shells, after zprofile before zlogin
 
 # Mixed {{{1
+
 umask 022
 autoload -U colors && colors
 autoload zmv
