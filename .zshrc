@@ -207,9 +207,12 @@ zstyle ':vcs_info:*:prompt:*' nvcsformats   ""                             "%~"
 
 precmd()
 {
-       psvar=()
-       vcs_info 'prompt'
-       [[ -n $vcs_info_msg_0_ ]] && psvar[1]="$vcs_info_msg_0_"
+	psvar=()
+	vcs_info 'prompt'
+	[[ -n $vcs_info_msg_0_ ]] && psvar[1]="$vcs_info_msg_0_"
+
+	# Set the iTerm tab title to current directory.
+	echo -ne "\e]1;${PWD##*/} (${vcs_info_msg_0_})\a";
 }
 
 set -A prompt_array \
