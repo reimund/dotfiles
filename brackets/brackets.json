@@ -1,4 +1,5 @@
 {
+    "sortDirectoriesFirst": true,
     "linting.collapsed": true,
     "themes.theme": "care-bear-stare-dark",
     "vimderbar.enabled": true,
@@ -9,11 +10,27 @@
     "tabSize": 4,
     "jwolfe.file-tree-exclude.list": [
         "node_modules",
+        "bower_components",
         ".git",
         "vendor",
         "Running Performance (bicimetrics)",
         "Running Performance (salming)",
         "Running Performance (khp)"
     ],
-    "toggleToolbar.hidden": false
+    "toggleToolbar.hidden": true,
+    "fonts.fontFamily": "'SourceCodePro-Medium', ＭＳ ゴシック, 'MS Gothic', monospace",
+    "brackets-file-tree-exclude.excludeList": [
+        "/.git/",
+        "/dist/",
+        "/bower_components/",
+        "/node_modules/"
+    ],
+    "fileFilters": [
+        {
+            "name": "",
+            "patterns": [
+                "build/*"
+            ]
+        }
+    ]
 }
