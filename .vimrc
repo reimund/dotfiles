@@ -63,6 +63,9 @@ au BufNewFile,BufRead *.less set filetype=less
 " Add xml syntax highlighting to files with the .mxi extension.
 au BufRead,BufNewFile *.mxi setfiletype xml
 
+" Add jsx syntax highlighting for .js files.
+let g:jsx_ext_required = 0
+
 au BufRead,BufNewFile *.paf setfiletype yaml
 au BufRead,BufNewFile *.v3s setfiletype php
 au BufRead,BufNewFile *.hook setfiletype php
