@@ -107,6 +107,7 @@ case $OSTYPE in
                ;;
 esac
 
+alias cd..='cd ..'
 alias ll='ls -la'
 alias l='ls -1'
 alias lsd='ll -df */'
