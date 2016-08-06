@@ -192,6 +192,21 @@ nmap <F8> :Rand 100000<CR>
 	set backupskip=/tmp/*,/private/tmp/*" 
 :endif
 
+function FormatJSON(...) 
+  let code="\"
+        \ var i = process.stdin, d = '';
+        \ i.resume();
+        \ i.setEncoding('utf8');
+        \ i.on('data', function(data) { d += data; });
+        \ i.on('end', function() {
+        \     console.log(JSON.stringify(JSON.parse(d), null, 
+        \ " . (a:0 ? a:1 ? a:1 : 2 : 2) . "));
+        \ });\""
+  execute "%! node -e " . code 
+endfunction
+
+map <leader>fj :<C-U>call FormatJSON(v:count)<CR>
+
 " Smart tab completion function from
 " http://vim.wikia.com/wiki/Smart_mapping_for_tab_completion
 "function! Smart_TabComplete()
