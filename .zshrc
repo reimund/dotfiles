@@ -219,7 +219,7 @@ precmd()
 	[[ -n $vcs_info_msg_0_ ]] && psvar[1]="$vcs_info_msg_0_"
 
 	# Set the iTerm tab title to current directory.
-	echo -ne "\e]1;${PWD##*/} (${vcs_info_msg_0_})\a";
+	echo -ne "\e]1;${PWD##*/} (${vcs_info_msg_0_})\a" 2> /dev/null;
 }
 
 set -A prompt_array \
