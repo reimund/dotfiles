@@ -1,36 +1,52 @@
 {
-    "sortDirectoriesFirst": true,
-    "linting.collapsed": true,
-    "themes.theme": "care-bear-stare-dark",
-    "vimderbar.enabled": true,
-    "wordWrap": false,
-    "styleActiveLine": true,
-    "fonts.fontSize": "14px",
-    "useTabChar": true,
-    "tabSize": 4,
-    "jwolfe.file-tree-exclude.list": [
-        "node_modules",
-        "bower_components",
-        ".git",
-        "vendor",
-        "Running Performance (bicimetrics)",
-        "Running Performance (salming)",
-        "Running Performance (khp)"
-    ],
-    "toggleToolbar.hidden": true,
-    "fonts.fontFamily": "'SourceCodePro-Medium', ＭＳ ゴシック, 'MS Gothic', monospace",
-    "brackets-file-tree-exclude.excludeList": [
-        "/.git/",
-        "/dist/",
-        "/bower_components/",
-        "/node_modules/"
-    ],
-    "fileFilters": [
-        {
-            "name": "",
-            "patterns": [
-                "build/*"
-            ]
-        }
-    ]
+	"sortDirectoriesFirst": true,
+	"linting.collapsed": true,
+	"themes.theme": "care-bear-stare-dark",
+	"vimderbar.enabled": true,
+	"wordWrap": false,
+	"styleActiveLine": true,
+	"fonts.fontSize": "14px",
+	"useTabChar": true,
+	"tabSize": 4,
+	"toggleToolbar.hidden": true,
+	"fonts.fontFamily": "'SourceCodePro-Medium', ＭＳ ゴシック, 'MS Gothic', monospace",
+	"brackets-file-tree-exclude.excludeList": [
+		"vendor",
+		".DS_Store",
+		"/.git/",
+		"/bower_components/",
+		"/node_modules/"
+	],
+	"fileFilters": [
+		{
+			"name": "",
+			"patterns": [
+				"build/*"
+			]
+		}
+	],
+	"noDistractions": false,
+	"language.fileExtensions": {
+		"v3s": "php",
+		"paf": "yaml"
+	},
+	"scientech-com-ua.brackets-trailingspaces.checked": true,
+	"brackets-wsSanitizer.newline": false,
+	"denniskehrig.ShowWhitespace.checked": true,
+	"denniskehrig.ShowWhitespace.colors": {
+		"light": {
+			"empty": "#ccc",
+			"leading": "#cf0",
+			"trailing": "#ff0000",
+			"whitespace": "#ccc"
+		},
+		"dark": {
+			"empty": "#686963",
+			"leading": "#191919",
+			"trailing": "#ff0000",
+			"whitespace": "#686963"
+		}
+	},
+	"denniskehrig.ShowWhitespace.enabled": true,
+	"brackets-wsSanitizer.notification": false
 }
