@@ -21,6 +21,7 @@ export ZDOTDIR=~
 export LANG=en_US.UTF-8
 export FONTCONFIG_PATH=/opt/local/etc/fonts/
 export DJANGO_ENV=hackmon
+export HOMEBREW_GITHUB_API_TOKEN=6e9387d3d4234a6b7de0441fc3c4f30988102041
 
 NPM_PACKAGES=~/.npm-packages
 NODE_PATH="$NPM_PACKAGES/lib/node_modules"
