@@ -202,7 +202,7 @@ function FormatJSON(...)
         \     console.log(JSON.stringify(JSON.parse(d), null, 
         \ " . (a:0 ? a:1 ? a:1 : 2 : 2) . "));
         \ });\""
-  execute "%! node -e " . code 
+  execute "%! /usr/local/bin/node -e " . code 
 endfunction
 
 map <leader>fj :<C-U>call FormatJSON(v:count)<CR>
