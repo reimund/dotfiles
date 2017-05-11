@@ -22,6 +22,10 @@ export LANG=en_US.UTF-8
 export FONTCONFIG_PATH=/opt/local/etc/fonts/
 export DJANGO_ENV=hackmon
 
+NPM_PACKAGES=~/.npm-packages
+NODE_PATH="$NPM_PACKAGES/lib/node_modules"
+PATH="$NPM_PACKAGES/bin:$PATH"
+
 
 # Source host specific file.
 [[ -e $ZDOTDIR/zshrc.$HOST ]] && . $ZDOTDIR/zshrc.$HOST
