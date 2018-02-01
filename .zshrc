@@ -216,10 +216,20 @@ precmd()
 {
 	psvar=()
 	vcs_info 'prompt'
+
 	[[ -n $vcs_info_msg_0_ ]] && psvar[1]="$vcs_info_msg_0_"
 
+	# Remove leading whitespace.
+	trimmed_branch="${vcs_info_msg_0_## }"
+
+	if [ -z "$trimmed_branch" ]; then
+		branch=''
+	else
+		branch="(${trimmed_branch})"
+	fi
+
 	# Set the iTerm tab title to current directory.
-	echo -ne "\e]1;${PWD##*/} (${vcs_info_msg_0_})\a" 2> /dev/null;
+	echo -ne "\e]1;${PWD##*/} ${branch}\a" 2> /dev/null;
 }
 
 set -A prompt_array \
