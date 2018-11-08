@@ -37,7 +37,7 @@ set fdm=marker       " Use fold method = marker.
 set list lcs=tab:\|\ " Show tab characters as |.
 
 " This makes things go whack in the terminal for some reason.
-if has("gui")
+if has('gui')
 	set lines=65 columns=120
 endif
 
@@ -79,6 +79,10 @@ set noexpandtab     " Make sure tabs are not expanded to spaces.
 set softtabstop=0   " Make sure soft tabs are disabled.
 set shiftwidth=4    " Let (auto)indent use 4 spaces.
 filetype plugin on  " Enable filetype-specific plugins (Used by Align.vba).
+
+autocmd FileType python setlocal noexpandtab
+autocmd FileType python set tabstop=4
+autocmd FileType python set shiftwidth=4
 
 
 " Show filename in status line.
