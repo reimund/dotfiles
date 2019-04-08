@@ -37,11 +37,11 @@ set fdm=marker       " Use fold method = marker.
 set list lcs=tab:\|\ " Show tab characters as |.
 
 " This makes things go whack in the terminal for some reason.
-if has('gui')
+if has('gui_running')
 	set lines=65 columns=120
 endif
 
-if has('mac')
+if has('gui_macvim') && has('gui_running')
 	set guifont=Menlo:h12
 	set lines=120 columns=160
 endif
