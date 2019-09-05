@@ -14,18 +14,20 @@ autoload zmv
 setopt autopushd
 
 # Set environment variables.
-export PATH=/opt/local/bin:/opt/local/sbin:/opt/local/apache2/bin:~/bin/:/opt/local/lib/postgresql92/bin:~/bin:/usr/local/mongodb/bin:$PATH
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/local/mongodb/bin:~/bin/phantomjs-2.1.1-macosx/bin:~/Library/Python/3.7/bin:/usr/local/Cellar/php@7.2/7.2.20/bin/:$PATH
 export PYTHONPATH=/Library/Python/2.7/site-packages/django/bin:PYTHONPATH
 export ZDOTDIR=~
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export FONTCONFIG_PATH=/opt/local/etc/fonts/
 export DJANGO_ENV=hackmon
-export HOMEBREW_GITHUB_API_TOKEN=6e9387d3d4234a6b7de0441fc3c4f30988102041
 
-NPM_PACKAGES=~/.npm-packages
-NODE_PATH="$NPM_PACKAGES/lib/node_modules"
-PATH="$NPM_PACKAGES/bin:$PATH"
+export NPM_CONFIG_PREFIX=~/.npm
+export NODE_PATH=$NODE_PATH:$HOME/.npm/lib/node_modules
+export PATH="$NPM_CONFIG_PREFIX/bin:$PATH"
+#NPM_PACKAGES=~/.npm-packages
+#NODE_PATH="$NPM_PACKAGES/lib/node_modules"
+#PATH="$NPM_PACKAGES/bin:$PATH"
 
 
 # Source host specific file.
@@ -38,6 +40,12 @@ alias ss='source ~/.zshrc'
 alias zshrc='mvim ~/.zshrc'
 alias vimrc='mvim ~/.vimrc'
 alias crontab='VIM_CRONTAB=true crontab'
+
+# Set window title, useful together with Display Maid.
+# # My iTerm2 config:
+# Watchers		Work 1
+# Servers		Work 2
+alias set_title='f() { echo -ne "\033]0;"$1"\007" };f'
 
 alias rm='rm -i'
 alias df='df -h'
