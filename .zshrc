@@ -13,23 +13,6 @@ autoload -U colors && colors
 autoload zmv
 setopt autopushd
 
-# Set environment variables.
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:~/bin:/usr/local/mongodb/bin:~/bin/phantomjs-2.1.1-macosx/bin:~/Library/Python/3.7/bin:/usr/local/Cellar/php@7.2/7.2.20/bin/:$PATH
-export PYTHONPATH=/Library/Python/2.7/site-packages/django/bin:PYTHONPATH
-export ZDOTDIR=~
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export FONTCONFIG_PATH=/opt/local/etc/fonts/
-export DJANGO_ENV=hackmon
-
-export NPM_CONFIG_PREFIX=~/.npm
-export NODE_PATH=$NODE_PATH:$HOME/.npm/lib/node_modules
-export PATH="$NPM_CONFIG_PREFIX/bin:$PATH"
-#NPM_PACKAGES=~/.npm-packages
-#NODE_PATH="$NPM_PACKAGES/lib/node_modules"
-#PATH="$NPM_PACKAGES/bin:$PATH"
-
-
 # Source host specific file.
 [[ -e $ZDOTDIR/zshrc.$HOST ]] && . $ZDOTDIR/zshrc.$HOST
 [[ -e $ZDOTDIR/zshrc.${HOST:r:e} ]] && . $ZDOTDIR/zshrc.${HOST:r:e}
@@ -347,5 +330,35 @@ setopt extended_history     # Save timestamps with command.
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+# Paths {{{1
+# Setup PYTHONPATH
+export PYTHONPATH=/Library/Python/2.7/site-packages/django/bin:PYTHONPATH
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# Set various environment variables.
+export ZDOTDIR=~
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export FONTCONFIG_PATH=/opt/local/etc/fonts/
+export DJANGO_ENV=hackmon
+export SVN_EDITOR=vi
+
+# Setup PATH
+export PATH=~/bin
+export PATH=/usr/bin/:$PATH
+export PATH=/usr/sbin/:$PATH
+export PATH=/opt/homebrew/bin:$PATH
+
+#export NPM_CONFIG_PREFIX=~/.npm
+export NODE_PATH=$NODE_PATH:$HOME/.npm/lib/node_modules
+export PATH="$NPM_CONFIG_PREFIX/bin:$PATH"
+#NPM_PACKAGES=~/.npm-packages
+#NODE_PATH="$NPM_PACKAGES/lib/node_modules"
+#PATH="$NPM_PACKAGES/bin:$PATH"
+
+export PATH="/opt/homebrew/opt/php@8.0/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"
+export PATH="/opt/homebrew/opt/mongodb-community@5.0/bin:$PATH"
+export PATH="/Users/reimund/Library/Python/3.9/bin:$PATH"
+export PATH="/Applications/MAMP/Library/bin:$PATH"
+
+
