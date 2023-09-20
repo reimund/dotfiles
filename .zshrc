@@ -323,6 +323,10 @@ setopt extended_history     # Save timestamps with command.
 # vim: ft=zsh foldmethod=marker :
 
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Paths {{{1
 # Setup PYTHONPATH
 export PYTHONPATH=/Library/Python/2.7/site-packages/django/bin:PYTHONPATH
