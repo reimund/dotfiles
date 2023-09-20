@@ -323,8 +323,6 @@ setopt extended_history     # Save timestamps with command.
 # vim: ft=zsh foldmethod=marker :
 
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
 # Paths {{{1
 # Setup PYTHONPATH
 export PYTHONPATH=/Library/Python/2.7/site-packages/django/bin:PYTHONPATH
