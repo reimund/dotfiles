@@ -357,3 +357,5 @@ export PATH="/Users/reimund/Library/Python/3.9/bin:$PATH"
 export PATH="/Applications/MAMP/Library/bin:$PATH"
 
 
+nvm alias default 16
+nvm use default
