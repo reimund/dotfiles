@@ -198,6 +198,15 @@ zstyle ':vcs_info:*:prompt:*' actionformats " ${FMT_BRANCH}${FMT_ACTION}" " ~${F
 zstyle ':vcs_info:*:prompt:*' formats       " ${FMT_BRANCH}"              " ~${FMT_PATH}"
 zstyle ':vcs_info:*:prompt:*' nvcsformats   ""                             "%~"
 
+function set_name() {
+	# Set the Warp tab title to [parent directory] / [current directory].
+ 	echo -ne "\033]0;$(basename $(dirname $PWD)) / ${PWD##*/}\007"
+}
+
+#
+# Add the function to the environment variable in either Zsh or Bash
+precmd_functions+=(set_name)
+
 precmd()
 {
 	psvar=()
