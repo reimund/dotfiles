@@ -55,7 +55,7 @@ alias gc='git commit -m'
 alias gca='git commit --amend'
 alias ga='git add'
 alias gi='git add -i'
-alias gau='git add -u'
+alias gau='git add -u -v'
 alias gpl='git pull'
 alias gps='git push'
 alias gsta='git stash'
@@ -76,11 +76,6 @@ alias fa='cd ~/Projects/fashionaffiliate'
 
 alias show_hidden='defaults write com.apple.Finder AppleShowAllFiles YES'
 alias hide_hidden='defaults write com.apple.Finder AppleShowAllFiles NO'
-alias start_syn='/usr/local/synergy-1.3.1/synergys -f --config /usr/local/synergy-1.3.1/reimund.conf'
-
-alias mysql_start='sudo /opt/local/etc/LaunchDaemons/org.macports.mysql5/mysql5.wrapper start';
-alias mysql_stop='sudo /opt/local/etc/LaunchDaemons/org.macports.mysql5/mysql5.wrapper stop';
-alias mysql_restart='sudo /opt/local/etc/LaunchDaemons/org.macports.mysql5/mysql5.wrapper restart';
 
 #alias nginx_start='sudo nginx'
 #alias nginx_stop='sudo kill `cat /opt/local/var/run/nginx/nginx.pid`'
